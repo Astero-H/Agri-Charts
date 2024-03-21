@@ -2,3 +2,4 @@ node_modules
 .parcel-cache
 dist
 extracted_files
+processed_files
