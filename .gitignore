@@ -3,3 +3,4 @@ node_modules
 dist
 extracted_files
 processed_files
+outputjson
