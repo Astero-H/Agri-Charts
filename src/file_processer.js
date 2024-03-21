@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const XLSX = require('xlsx');
 
-const inputDir = './extracted_files';
-const outputDir = './processed_files';
+const inputDir = path.join(__dirname, "..", "extracted_files");
+const outputDir = path.join(__dirname, "..", "processed_files"); 
 
 // On s'assure que le dossier de sortie existe
 if (!fs.existsSync(outputDir)) {
@@ -12,6 +12,7 @@ if (!fs.existsSync(outputDir)) {
 
 // Lire tous les fichiers .xlsx du dossier inputDir
 const files = fs.readdirSync(inputDir).filter(file => path.extname(file) === '.xlsx');
+console.log('Liste des fichiers : ',files);
 
 files.forEach(file => {
   const filePath = path.join(inputDir, file);
