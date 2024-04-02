@@ -4,3 +4,4 @@ dist
 extracted_files
 processed_files
 outputjson
+.env
