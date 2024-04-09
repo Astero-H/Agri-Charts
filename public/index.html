@@ -1,32 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <title>Agrimer Stats</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard avec Graphique</title>
   <link href="./css/styles.css" rel="stylesheet">
 </head>
-<body class="d-flex h-100 text-center text-bg-dark">
-  <div class="container-fluid h-100 p-3">
-    <div class="row h-100">
-      <!-- Colonne pour les boutons et le sélecteur -->
-      <div class="col-md-4 d-flex flex-column align-items-start justify-content-start">
-        <div id="fileList" class="w-100 mb-2">
-          <!-- Les boutons seront injectés ici -->
-        </div>
-        <div class="w-100">
-          <select name="cat-product-lines" id="cat-product" class="form-select form-select-lg mb-4">
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Autre Option
+              </a>
+            </li>
+            <div id="fileList" class="w-100 mb-2">
+              <!-- Les boutons seront injectés ici -->
+            </div>
+          </ul>
+          <div class="row h-100"></div>
+          <div class="w-100">
+            <select name="cat-product-lines" id="cat-product" class="form-select form-select-lg mb-4">
               <!-- Les options seront injectées ici -->
-          </select>
+            </select>
+          </div>
         </div>
-      </div>
-      <!-- Colonne pour le graphique -->
-      <div class="col-md-8 d-flex align-items-center justify-content-center">
-        <canvas id="agridata"></canvas>
-      </div>
     </div>
+    </nav>
+    <!-- Zone principale pour le graphique -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <canvas id="agridata"></canvas>
+    </main>
   </div>
+  </div>
+
   <script type="module" src="./../src/agri_markets.js"></script>
 </body>
+
 </html>

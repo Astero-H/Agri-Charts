@@ -1,9 +1,22 @@
 @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-
 body, html {
     height: 100%;
     margin: 0;
+}
+
+.container-fluid {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100vh;
+}
+#sidebarMenu {
+  flex: 0 0 250px; 
+  height: 100vh; /* Pleine hauteur */
+  overflow-y: auto; /* Ajoute une barre de défilement si nécessaire */
+}
+main {
+  flex-grow: 1; 
 }
 
 .bd-placeholder-img {
